@@ -1,0 +1,16 @@
+{%extends 'flatpages/default.html'%}
+
+{% block title %}
+News_add
+{% endblock title %}
+
+{% block content %}
+    <h1>Добавление/редактирование статей</h1>
+    <hr/>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Подтвердить">
+    </form>
+{% endblock content %}
